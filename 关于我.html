@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>关于</title>
+    <link rel="stylesheet" href="关于我.css"/>
+</head>
+<body>
+<div class="max" >
+    <div class=" top">
+        <div id="nav">
+            <div><a href="#">资源教程</a></div>
+            <div><a href="#">生活笔记</a></div>
+            <div><a href="#">网站优化</a></div>
+            <div><a href="#">生活随记</a></div>
+        </div>
+
+
+        <!--    top-->
+        <div class= "top">
+
+            <!--    top_left-->
+            <div class="top_left">
+                <!--        top_left_left 个人博客-->
+                <div class="top_left_left">
+                    <h2>个人博客</h2>
+                </div>
+                <!--       top_left_right首页-->
+                <div class="top_left_right">
+                    <ul>
+                        <li><a href="index.html">首页</a> </li>
+                        <li  id="xl" onclick="xial()"><a href="#">分类</a>
+                            <img src="下拉.png" >
+                        </li>
+                        <li><a href="归档.html">归档</a> </li>
+                        <li><a href="友链.html"> 友链</a> </li>
+                        <li><a href="留言板.html">留言</a> </li>
+                        <li><a href="关于我.html">关于</a> </li>
+                    </ul>
+                    <div>
+                    </div>
+
+                    <!--    top_right-->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--    top_right-->
+            <div class="top_right">
+                <div class="top_right_son"><img src="搜索.png"></div>
+                <div class="top_right_son"><img src="喜欢.png"></div>
+                <div class="top_right_son"><img src="音乐.png"></div>
+                <div class="top_right_son"><img src="通知.png"></div>
+
+            </div>
+            <!--清除盒子浮动 -->
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="kong"></div>
+    <!--    imge-->
+    <div  ><img src="关于我.png" class="imge"></div>
+
+
+
+<!--    文字-->
+
+<div class="tex">
+    <div class="tex_box">
+        <div class="tex_box_box">
+        <h2>我</h2>
+        <br><br>
+        简单来说，是个好人。目前本科在读，计算机专业，对计算机爱得深沉。对购买电子设备有浓厚兴趣，一直热衷于折腾。
+        <br><br>
+        主要优点有：乐于助人，长得帅，爱交朋友，女朋友漂亮，长得帅等。。。
+        <br><br>
+        关于博客，初入博客圈，已然结识了一群志同道合的朋友，学习、感悟甚多，在此感谢各位博友。
+        <br><br>
+        如无意外，此博客我会一直用心经营下去。
+        </div>
+    </div>
+
+</div>
+
+    <div>
+        <div class="form">
+            <div>
+                <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;添加新评论:</h3><br>
+                <div class="form_box">
+                    <form action="#" method="post" name="发表留言" style="width: 800px">
+                        <textarea cols="75" rows="10" class="form_style" placeholder="在这里输入你的评论..."></textarea>
+
+                        <input type="text" name="称呼" placeholder="称呼*" class="input_style"/>
+                        <input type="email" name="电子邮件" placeholder="电子邮件*" style="margin-left: 100px;width: 30%;background-color: #d3d3d3;border-radius: 5px;height: 25px;"/>
+                        <p class="btn">
+                            <input type="submit" value="提交评论">
+
+
+                        </p>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div>
+
+    <div >
+
+        <div class="pinglun_h2">
+            <div class="pinglun_h2_box">
+            <h2>&nbsp;已有108条评论：</h2>
+            </div>
+        </div>
+
+
+        <div class="pinglun_son">
+            <div class="pinglun_son_box">
+
+            </div>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+<div class="d2">
+    <br>
+
+    <p >Copyright © 2022 我的博客 - 科技宅有趣的技术分享！</p>
+    <p><a href="">四川轻化工大学有限公司</a>。<a href="">计算机科学与技术208班曾朝强董事长赞助</a></p>
+</div>
+
+
+
+<script>
+    var a=true;
+    function $(id){
+        return document.getElementById(id);
+    }
+    function xial(){
+        // alert()
+        if(a){
+            $("nav").style.display="block";
+            a=false;
+        }else{
+            $("nav").style.display="none";
+            a=true;
+        }
+    }
+
+
+    window.onload = function () {
+        var div = document.getElementById('main');
+        var img = div.getElementsByTagName('img');
+        var count = 0;
+        var timer = null;
+        timer=setInterval(change ,2000);
+        function change() {
+            for (var i = 0; i < img.length; i++) {
+                img[i].style.display = 'none';
+            }
+            img[count].style.display = 'block';
+            count++;
+            if (count == img.length) {
+                count = 0;
+            }
+        }
+        div.onmouseover = function () {
+            clearInterval(timer);
+        }
+        div.onmouseout = function () {
+            timer = setInterval(change, 2000);
+        }
+    }
+
+</script>
+
+</body>
+</html>

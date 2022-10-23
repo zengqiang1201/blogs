@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="首页.css"/>
+
+</head>
+
+<body>
+
+<div class="max" >
+
+
+    <div>
+        <div id="nav">
+            <div><a href="#">资源教程</a></div>
+            <div><a href="#">生活笔记</a></div>
+            <div><a href="#">网站优化</a></div>
+            <div><a href="#">生活随记</a></div>
+        </div>
+
+
+        <!--    top-->
+        <div class= "top">
+
+            <!--    top_left-->
+            <div class="top_left">
+                <!--        top_left_left 个人博客-->
+                <div class="top_left_left">
+                    <h2>个人博客</h2>
+                </div>
+                <!--       top_left_right首页-->
+                <div class="top_left_right">
+                    <ul>
+                        <li><a href="index.html"> 首页</a> </li>
+                        <li  id="xl" onclick="xial()"><a href="#">分类</a>
+                            <img src="下拉.png" >
+                        </li>
+                        <li><a href="归档.html">归档</a> </li>
+                        <li><a href="友链.html">友链</a> </li>
+                        <li><a href="留言板.html">留言</a> </li>
+                        <li><a href="关于我.html">关于</a> </li>
+                    </ul>
+                    <div>
+                    </div>
+
+                    <!--    top_right-->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--    top_right-->
+            <div class="top_right">
+                <div class="top_right_son"><img src="搜索.png"></div>
+                <div class="top_right_son"><img src="喜欢.png"></div>
+                <div class="top_right_son"><img src="音乐.png"></div>
+                <div class="top_right_son"><img src="通知.png"></div>
+
+            </div>
+            <!--清除盒子浮动 -->
+            <div class="clear">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="kong"></div>
+    <div id="main" >
+        <!--轮播图       -->
+
+        <img src="主页背景.png" width="100%" height="100%"/>
+        <img src="小2.png" width="100%" height="100%"/>
+        <img src="归档.png" width="100%" height="100%"/>
+        <img src="背景2.png" width="100%" height="100%"/>
+
+    </div>
+
+
+    <div class="box">
+
+
+        <div class="box_box1">
+            <div class="box_box1_box">
+                <h2>oh-my-zsh 插件推荐 : autojump、zsh-autosuggestion</h2>
+                <p>2022年10月15日●生活笔记</p>
+            </div>
+        </div>
+
+
+        <div class="box_box2">
+            <div class="box_box1_box">
+                <h2>CloudXNS停止免费域名解析服务 & 免费域名 DNS 服务推荐</h2>
+                <p>2022年10月14日●生活笔记</p>
+            </div>
+        </div>
+
+
+        <div class="box_box3">
+            <div class="box_box1_box">
+                <h2>UCLOUD 实名认证即得 50 元代金券 撸一年.com 域名</h2>
+                <p>2022年10月15日●学习笔记</p>
+            </div>
+
+
+
+        </div>
+
+
+        <div class="box_box4">
+            <div class="box_box1_box">
+                <h2>网站预加载 JS 脚本 instant.page</h2>
+                <h3>2022年10月15日●学习笔记</h3>
+            </div>
+        </div>
+
+    </div>
+
+    <!--    bottmom-->
+    <div class="bott_max">
+        <div class="bott" >
+            <div  class=" bott1">
+                <div class="bott_box1"><div class="bott_box3_box3"><h2>我的五彩生活</h2></div></div>  <div class="bott_box2"><div class="bott_box3_box3"><h2>程序员常见面试题</h2></div></div>
+            </div>
+            <div   class="bott1">
+                <div class="bott_box3"><div class="bott_box3_box3"><h2>网站改版了！</h2></div></div>  <div class="bott_box4"><div class="bott_box3_box3"><h2>HTML5+CSS+JS</h2></div></div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<div class="d2">
+
+    <br>
+
+    <p >Copyright © 2022 我的博客 - 科技宅有趣的技术分享！</p>
+    <p><a href="">四川轻化工大学有限公司</a>。<a href="">计算机科学与技术208班曾朝强董事长赞助</a></p>
+</div>
+
+
+<script>
+    var a=true;
+    function $(id){
+        return document.getElementById(id);
+    }
+    function xial(){
+        // alert()
+        if(a){
+            $("nav").style.display="block";
+            a=false;
+        }else{
+            $("nav").style.display="none";
+            a=true;
+        }
+    }
+
+
+    window.onload = function () {
+        var div = document.getElementById('main');
+        var img = div.getElementsByTagName('img');
+        var count = 0;
+        var timer = null;
+        timer=setInterval(change ,2000);
+        function change() {
+            for (var i = 0; i < img.length; i++) {
+                img[i].style.display = 'none';
+            }
+            img[count].style.display = 'block';
+            count++;
+            if (count == img.length) {
+                count = 0;
+            }
+        }
+        div.onmouseover = function () {
+            clearInterval(timer);
+        }
+        div.onmouseout = function () {
+            timer = setInterval(change, 2000);
+        }
+    }
+
+</script>
+</body>
+</html>

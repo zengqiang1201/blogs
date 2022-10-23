@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>友链</title>
+    <link rel="stylesheet" href="友链.css"/>
+
+</head>
+<body>
+<div class="max" >
+    <div class=" top">
+        <div id="nav">
+            <div><a href="#">资源教程</a></div>
+            <div><a href="#">生活笔记</a></div>
+            <div><a href="#">网站优化</a></div>
+            <div><a href="#">生活随记</a></div>
+        </div>
+
+        <!--    top-->
+        <div class= "top">
+
+            <!--    top_left-->
+            <div class="top_left">
+                <!--        top_left_left 个人博客-->
+                <div class="top_left_left">
+                    <h2>个人博客</h2>
+                </div>
+                <!--       top_left_right首页-->
+                <div class="top_left_right">
+                    <ul>
+                        <li><a href="index.html">首页</a> </li>
+                        <li  id="xl" onclick="xial()"><a href="#">分类</a>
+                            <img src="下拉.png" >
+                        </li>
+                        <li><a href="归档.html">归档</a> </li>
+                        <li><a href="友链.html">友链</a> </li>
+                        <li><a href="留言板.html">留言</a> </li>
+                        <li><a href="关于我.html">关于</a> </li>
+                    </ul>
+                    <div>
+                    </div>
+
+                    <!--    top_right-->
+                    <div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!--    top_right-->
+            <div class="top_right">
+                <div class="top_right_son"><img src="搜索.png"></div>
+                <div class="top_right_son"><img src="喜欢.png"></div>
+                <div class="top_right_son"><img src="音乐.png"></div>
+                <div class="top_right_son"><img src="通知.png"></div>
+
+            </div>
+            <!--清除盒子浮动 -->
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="kong"></div>
+    <!--    imge-->
+    <div  ><img src="友链.png" class="imge"></div>
+
+
+    <div>
+        <div class="wenzi_1">
+            <div class="wenzi_1_box">
+                <h2>友链申请</h2><br>
+                <p>先友后链，请尝试</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="wenzi">
+        <div  class="wenzi_box">
+
+            <h2>常去博客</h2><br>
+            <h3>常去博客是一群内容我很喜欢，经常去拜访但是非友链的大佬们 ！</h3>
+
+        </div>
+    </div>
+
+
+
+
+    <div class="zhaopian">
+        <div class="zhaopian_box">
+            <ul class="polaroids">
+                <li> <a href="1"> <img src="友人4.png" > </a> </li>
+                <li> <a href="2"> <img src="友人1.png"> </a> </li>
+                <li> <a href="3"> <img src="友人2.png"> </a> </li>
+                <li> <a href="4"> <img src="友人3.png"> </a> </li>
+                <li> <a href="4"> <img src="友人5.png"> </a></li>
+                <li> <a href="4"> <img src="友人6.png"> </a></li>
+                <li> <a href="1"> <img src="友人7.png" > </a> </li>
+                <li> <a href="2"> <img src="友人8.png"> </a> </li>
+                <li> <a href="3"> <img src="友人9.png"> </a> </li>
+                <li> <a href="4"> <img src="友人10.png"> </a> </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="wenzi_1">
+        <div class="wenzi_1_box">
+            <h2>捕捉大佬</h2><br>
+        </div>
+    </div>
+
+
+    <div class="zhaopian_1">
+        <div class="zhaopian_1_box">
+            <ul class="polaroids">
+                <li> <a href="1"> <img src="友人11.png" > </a> </li>
+                <li> <a href="2"> <img src="友人12.png"> </a> </li>
+                <li> <a href="3"> <img src="友人13.png"> </a> </li>
+                <li> <a href="4"> <img src="友人14.png"> </a> </li>
+                <li> <a href="4"> <img src="友人15.png"> </a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="d2">
+
+    <br>
+
+    <p >Copyright © 2022 我的博客 - 科技宅有趣的技术分享！</p>
+    <p><a href="">四川轻化工大学有限公司</a>。<a href="">计算机科学与技术208班曾朝强董事长赞助</a></p>
+</div>
+
+<script>
+    var a=true;
+    function $(id){
+        return document.getElementById(id);
+    }
+    function xial(){
+        // alert()
+        if(a){
+            $("nav").style.display="block";
+            a=false;
+        }else{
+            $("nav").style.display="none";
+            a=true;
+        }
+    }
+
+</script>
+
+
+
+</body>
+</html>
